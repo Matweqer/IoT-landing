@@ -1,0 +1,20 @@
+# IDE / Editor
+.idea
+.vscode
+
+# Logs and dependencies
+*.log*
+/node_modules
+
+# production
+/build
+.eslintcache
+
+# misc
+.DS_Store
+.AppleDouble
+.LSOverride
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
