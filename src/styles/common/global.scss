@@ -1,0 +1,32 @@
+@import '../libs/normalize';
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+
+    font-family: $font-family;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    position: relative;
+
+    max-height: 100vh;
+    overflow-y: hidden;
+}
