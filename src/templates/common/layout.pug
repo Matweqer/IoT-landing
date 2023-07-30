@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            title SecureMyHouse
+            meta(name="description" content="Интеллектуальная система управления 'Интернетом вещей' 'SecureMyHouse'")
+            meta(name="keywords" content="ICTIS, Safety")
+            meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0")
+            meta(name="robots" content="INDEX,FOLLOW")
+            meta(name="format-detection" content="telephone=no")
+
+            link(rel="stylesheet" href="css/style.min.css")
+
+    body
+        block svg
+            div(style="display: none")
+                include ../../../build/img/sprite.svg
+        block content
+        block scripts
+            script(src="js/main.min.js")
