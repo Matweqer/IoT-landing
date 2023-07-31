@@ -1,0 +1,20 @@
+@import "../mixins/media";
+@import "variables";
+
+:root {
+    --page-gap-mobile: 16px;
+    --page-gap-tablet: 78px;
+    --page-gap-desktop: 120px;
+
+    @include media-till($media-tablet) {
+        --page-gap: var(--page-gap-mobile);
+    }
+
+    @include media-between($media-tablet, $media-tablet-horizontal) {
+        --page-gap: var(--page-gap-tablet);
+    }
+
+    @include media-from($media-tablet-horizontal) {
+        --page-gap: var(--page-gap-desktop);
+    }
+};

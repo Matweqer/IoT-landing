@@ -1,0 +1,11 @@
+extends common/layout
+
+block content
+  main.main(data-role="main-content")
+    -var mix = 'main__safety'
+    include includes/index/section/safety/index
+    -var mix = 'main__copyright'
+    include includes/index/copyright
+    -var mix = 'main__navigation'
+    include includes/index/navigation
+    //- и другие блоки
