@@ -1,11 +1,13 @@
 @import 'utils/fonts';
 @import 'utils/variables';
+@import 'utils/page-gap';
 @import 'mixins/media';
 
 @import 'common/global';
-//@import 'common/brand-name';
-//
-//@import 'blocks/main';
+
+@import 'blocks/safety';
+@import 'blocks/copyright';
+@import 'blocks/navigation';
 //@import 'blocks/hero';
 //@import 'blocks/welcome-video';
 //@import 'blocks/content-info';

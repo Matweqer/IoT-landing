@@ -1,0 +1,43 @@
+.navigation {
+    @include media-from($media-tablet) {
+        position: fixed;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__item {
+        @include media-from($media-tablet) {
+            position: relative;
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50%;
+
+            background-color: var(--color-light-blue);
+
+            margin: 25px 0;
+        }
+
+        &._active {
+            background-color: var(--color-dark-blue);
+
+            &::before {
+                content: '';
+
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+                width: 60px;
+                height: 60px;
+
+                background-image: url('../img/common/navigation-bg.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
