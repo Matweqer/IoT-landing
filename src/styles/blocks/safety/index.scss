@@ -1,13 +1,12 @@
 .safety {
+    transition: transform calc(var(--transition-duration) * 3);
+
+    &.safety-viewed {
+        transform: translateY(-100vh);
+    }
+
     &__container {
         position: relative;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding-left: var(--page-gap);
-        padding-right: var(--page-gap);
 
         height: 100vh;
 

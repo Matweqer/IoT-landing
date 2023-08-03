@@ -1,0 +1,19 @@
+:root {
+    --container-align-items: center;
+    --container-justify-content: space-between;
+    --container-flex-direction: row;
+}
+
+.container {
+    display: flex;
+    justify-content: var(--container-justify-content);
+    align-items: var(--container-align-items);
+    flex-direction: var(--container-flex-direction);
+
+    padding-left: var(--page-gap);
+    padding-right: var(--page-gap);
+
+    height: 100vh;
+
+    margin: auto;
+}

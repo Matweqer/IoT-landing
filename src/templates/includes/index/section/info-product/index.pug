@@ -1,0 +1,18 @@
+section.info-product(class=`${mix}` data-role="info-product")
+    .info-product__container.container
+        h2.info-product__title SecureMyHouse
+        .info-product-text
+            p.info-product-text__item
+                | <b class="info-product-text__item_high">Интеллектуальная система управления “Интернетом вещей” “SecureMyHouse”</b>
+                | - это комплексная система по управлению и мониторингу безопасностью вашего дома. Это обеспечение не просто безопасности, а кибербезопасности.
+            p.info-product-text__item
+                | Постоянный мониторинг, управление с мобильного устройства, план реагирования на инциденты - наши конкурентные преимущества.
+                | Оборудование создано на отечественной элементной базе и производится нашими собственными силами.
+                | Система SecureMyHouse работает на платформе Android.
+        .info-product-list
+            -var parameters = ['защищенный протокол передачи данных','взаимодействие разнородных сенсоров и управляющего устройства','аутентификация узлов в сочетании с методами малоресурсной криптографии и методами вычисления доверия','рекомендации по дальнейшим действиям во время инцидента для пользователя','отечественная аппаратная база и собственное программное решение','комплексная архитектура','серверное решение']
+            include list
+            picture
+                source(srcset="img/info-product/img-mobile@1x.png 1x, img/info-product/img-mobile@2x.png 2x" media="screen and (max-width: 1023px)")
+                source(srcset="img/info-product/img-desk@1x.png 1x, img/info-product/img-desk@2x.png 2x" media="screen and (min-width: 1024px)")
+                img(class="info-product-list__img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==")

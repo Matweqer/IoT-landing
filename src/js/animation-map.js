@@ -15,17 +15,19 @@ const animationMap = {
     map: [
         {
             sectionName: 'safety-section',
+            relatedSelectors: ['[data-role="info-product"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['safety-section'] },
                 { selector: '[data-role="products"]', classList: ['products-preview'] },
             ],
         },
         {
-            sectionName: 'content-info-section',
-            relatedSelectors: ['[data-role="content-info"]'],
+            sectionName: 'info-product-section',
+            relatedSelectors: ['[data-role="info-product"]'],
             classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['content-info-section'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-show'] },
+                { selector: '[data-role="main-content"]', classList: ['info-product-section'] },
+                { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
+                { selector: '[data-role="info-product"]', classList: ['info-product-show'] },
             ],
         },
         {
