@@ -1,0 +1,18 @@
+.info-product-text {
+    margin: 0 0 36px;
+
+    &__item {
+        color: var(--color-light-black);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+
+        margin: 0 0 34px;
+
+        &_high {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
