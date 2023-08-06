@@ -23,7 +23,7 @@ const animationMap = {
         },
         {
             sectionName: 'info-product-section',
-            relatedSelectors: ['[data-role="info-product"]'],
+            relatedSelectors: ['[data-role=""]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['info-product-section'] },
                 { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
@@ -31,18 +31,13 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'products-section',
+            sectionName: 'suggestions',
             relatedSelectors: ['[data-role="products"]', '[data-role="stories-overlay"]'],
             classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['product-section'] },
-                { selector: '[data-role="products"]', classList: ['products-show'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-postview'] },
-            ],
-            reverseClassesMap: [
-                { selector: '[data-role="main-content"]', classList: ['product-section', 'gamma-section'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_out'] },
-                { selector: '[data-role="products"]', classList: ['products-show'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-postview'] },
+                { selector: '[data-role="main-content"]', classList: ['suggestions-section'] },
+                { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
+                { selector: '[data-role="info-product"]', classList: ['info-product-viewed'] },
+                { selector: '[data-role="suggestions"]', classList: ['suggestions-show'] },
             ],
         },
         {
