@@ -15,7 +15,6 @@ const animationMap = {
     map: [
         {
             sectionName: 'safety-section',
-            relatedSelectors: ['[data-role="info-product"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['safety-section'] },
                 { selector: '[data-role="products"]', classList: ['products-preview'] },
@@ -23,7 +22,7 @@ const animationMap = {
         },
         {
             sectionName: 'info-product-section',
-            relatedSelectors: ['[data-role=""]'],
+            relatedSelectors: ['[data-role="info-product"]', '[data-role="partners"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['info-product-section'] },
                 { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
@@ -32,7 +31,7 @@ const animationMap = {
         },
         {
             sectionName: 'suggestions',
-            relatedSelectors: ['[data-role="products"]', '[data-role="stories-overlay"]'],
+            relatedSelectors: ['[data-role="partners"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['suggestions-section'] },
                 { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
@@ -41,18 +40,15 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'gamma-section',
-            relatedSelectors: ['[data-role="gamma-products"]', '[data-role="gamma-background"]'],
+            sectionName: 'partners',
+            relatedSelectors: ['[data-role="contact-us"]'],
             classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['gamma-section'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_all'] },
-                { selector: '[data-role="products"]', classList: ['products-postview'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-afterview'] },
+                { selector: '[data-role="main-content"]', classList: ['partners-section'] },
+                { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
+                { selector: '[data-role="info-product"]', classList: ['info-product-viewed'] },
+                { selector: '[data-role="suggestions"]', classList: ['suggestions-viewed'] },
+                { selector: '[data-role="partners"]', classList: ['partners-show'] },
             ],
-            delay: {
-                down: 1900,
-            },
-            event: 'box-animate',
         },
         {
             sectionName: 'gamma-section-1',
@@ -62,39 +58,6 @@ const animationMap = {
                 { selector: '[data-role="gamma-products"]', classList: ['gamma-products_details', 'gamma-products_details_1'] },
                 { selector: '[data-role="products"]', classList: ['products-postview'] },
                 { selector: '[data-role="content-info"]', classList: ['content-info-afterview'] },
-            ],
-        },
-        {
-            sectionName: 'gamma-section-2',
-            relatedSelectors: ['[data-role="gamma-products"]', '[data-role="gamma-background"]'],
-            classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['gamma-section', 'gamma-details'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_details', 'gamma-products_details_2'] },
-                { selector: '[data-role="products"]', classList: ['products-postview'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-afterview'] },
-            ],
-        },
-        {
-            sectionName: 'gamma-section-3',
-            relatedSelectors: ['[data-role="gamma-products"]', '[data-role="gamma-background"]'],
-            classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['gamma-section', 'gamma-details'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_details', 'gamma-products_details_3'] },
-                { selector: '[data-role="products"]', classList: ['products-postview'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-afterview'] },
-            ],
-        },
-        {
-            sectionName: 'vto-section',
-            relatedSelectors: ['[data-role="vto-invite"]', '[data-role="vto-overlay"]', '[data-role="women-block"]', '[data-role="gamma-products"]', '[data-role="gamma-background"]'],
-            classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['gamma-section', 'gamma-details'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_details', 'gamma-products_details_3'] },
-                { selector: '[data-role="products"]', classList: ['products-postview'] },
-                { selector: '[data-role="main-content"]', classList: ['vto-section'] },
-                { selector: '[data-role="women-block"]', classList: ['women-block-show', 'women-block-show_vto'] },
-                { selector: '[data-role="vto-invite"]', classList: ['vto-invite_open'] },
-                { selector: '[data-role="scroll-down-arrow"]', classList: ['last-section'] },
             ],
         },
     ],
