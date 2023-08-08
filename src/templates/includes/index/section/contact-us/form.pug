@@ -1,0 +1,13 @@
+.contact-us-form
+    h3.contact-us-form__title Напишите нам!
+    p.contact-us-form__description Готовы ответить на ваши вопросы в любое время
+    form.contact-us-form__form(id="contact-us-form" data-role="contact-us-form")
+        .contact-us-form__input
+            input(class="contact-us-form__input-input" id="contact-us-form-name" type="text", name="name", required placeholder="Ваше имя")
+        .contact-us-form__input
+            input(class="contact-us-form__input-input" id="contact-us-form-email" type="email", name="email", required placeholder="Ваш E-Mail")
+        .contact-us-form__textarea
+            textarea(class="contact-us-form__textarea-textarea" required minlength="50" id="contact-us-form-textarea" placeholder="Что хотели бы написать...")
+        .contact-us-form__submit
+            input(class="contact-us-form__submit-submit" type="submit", value="Отправить")
+

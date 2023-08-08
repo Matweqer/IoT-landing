@@ -51,13 +51,15 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'gamma-section-1',
-            relatedSelectors: ['[data-role="gamma-products"]', '[data-role="gamma-background"]'],
+            sectionName: 'contact-us',
+            relatedSelectors: ['[data-role="contact-us"]'],
             classesMap: [
-                { selector: '[data-role="main-content"]', classList: ['gamma-section', 'gamma-details'] },
-                { selector: '[data-role="gamma-products"]', classList: ['gamma-products_details', 'gamma-products_details_1'] },
-                { selector: '[data-role="products"]', classList: ['products-postview'] },
-                { selector: '[data-role="content-info"]', classList: ['content-info-afterview'] },
+                { selector: '[data-role="main-content"]', classList: ['contact-us-section'] },
+                { selector: '[data-role="safety"]', classList: ['safety-viewed'] },
+                { selector: '[data-role="info-product"]', classList: ['info-product-viewed'] },
+                { selector: '[data-role="suggestions"]', classList: ['suggestions-viewed'] },
+                { selector: '[data-role="partners"]', classList: ['partners-viewed'] },
+                { selector: '[data-role="contact-us"]', classList: ['contact-us-show'] },
             ],
         },
     ],
@@ -173,8 +175,6 @@ const animationMap = {
         }
 
         nextSection.relatedSelectors.forEach(selector => {
-            console.log(selector);
-
             loadImages(selector);
         });
     },
