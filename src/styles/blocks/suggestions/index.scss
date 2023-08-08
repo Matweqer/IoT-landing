@@ -15,10 +15,6 @@
         transform: translateY(0);
     }
 
-    &.suggestions-viewed {
-        transform: translateY(-100vh);
-    }
-
     &__container {
         --container-align-items: flex-start;
         --container-justify-content: center;

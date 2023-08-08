@@ -15,10 +15,6 @@
         transform: translateY(0);
     }
 
-    &.partners-viewed {
-        transform: translateY(-100vh);
-    }
-
     &__container {
         --container-flex-direction: column;
         --container-align-items: flex-start;
