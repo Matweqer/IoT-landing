@@ -5,6 +5,7 @@
 
 import ScrollObserver from './scroll-observer';
 import loadImages from './load-images';
+import navigation from './blocks/navigation';
 
 const animationMap = {
     activeStateInd: 0,
@@ -30,7 +31,7 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'suggestions',
+            sectionName: 'suggestions-section',
             relatedSelectors: ['[data-role="partners"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['suggestions-section'] },
@@ -40,7 +41,7 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'partners',
+            sectionName: 'partners-section',
             relatedSelectors: ['[data-role="contact-us"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['partners-section'] },
@@ -51,7 +52,7 @@ const animationMap = {
             ],
         },
         {
-            sectionName: 'contact-us',
+            sectionName: 'contact-us-section',
             relatedSelectors: ['[data-role="contact-us"]'],
             classesMap: [
                 { selector: '[data-role="main-content"]', classList: ['contact-us-section'] },
@@ -129,6 +130,8 @@ const animationMap = {
             this.body.dispatchEvent(new CustomEvent('state:updated', eventDetails));
             this.loadNextSectionImages();
 
+            navigation.updateNavigation(newState.sectionName);
+
             this.timeout = setTimeout(() => {
                 this.isUpdating = false;
             }, this.updatingDelay);
@@ -187,6 +190,10 @@ const animationMap = {
 
     goPrev() {
         this.updateState(this.activeStateInd, this.activeStateInd - 1, 'up', false);
+    },
+
+    updateNavigation () {
+
     },
 };
 

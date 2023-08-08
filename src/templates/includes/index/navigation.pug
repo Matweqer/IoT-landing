@@ -1,8 +1,14 @@
-- var n = 0
-.navigation
-  while n < 5
-    if n == 0
-        div(class="navigation__item _active")
-    else
-        .navigation__item
-    - n++
+.navigation(data-role="page-navigation")
+    -
+        var navigationItems = [
+                {sectionName: 'safety-section' },
+                {sectionName: 'info-product-section' },
+                {sectionName: 'suggestions-section' },
+                {sectionName: 'partners-section' },
+                {sectionName: 'contact-us-section' },
+            ];
+    each item, index in navigationItems
+        if index == 0
+            .navigation__item._active(data-navigation-item data-role="anchor-section" data-anchor-section-name=`${item.sectionName}`)
+        else
+            .navigation__item(data-navigation-item data-role="anchor-section" data-anchor-section-name=`${item.sectionName}`)
