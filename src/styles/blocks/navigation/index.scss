@@ -20,6 +20,10 @@
             margin: 25px 0;
         }
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &._active {
             background-color: var(--color-dark-blue);
 
