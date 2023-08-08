@@ -1,0 +1,26 @@
+.contact-us-list
+    h3.contact-us-list__title Наши контакты
+    .contact-us-list__container
+        -
+            var list = [{
+                    text: 'secCPS@yandex.ru',
+                    link: 'mailto:secCPS@yandex.ru',
+                    icon: 'email',
+                },{
+                    text: 'ФГАОУ ВО “Южный федеральный университет”',
+                    link: 'https://goo.gl/maps/B1Ac5rMMw97g6Cvr9',
+                    target: '_blank',
+                    icon: 'point',
+                },
+                {
+                    text: 'https://vk.com/ssscps',
+                    link: 'https://vk.com/ssscps',
+                    target: '_blank',
+                    icon: 'vk',
+                }];
+        each item in list
+            a(href=`${item.link}` target=`${item.target || '' }` class="contact-us-list__link")
+                .contact-us-list__item
+                    svg(class="contact-us-list__icon")
+                        use(xlink:href=`#${item.icon}`)
+                    .contact-us-list__text=item.text

@@ -1,3 +1,7 @@
+:root {
+    --safety-info-link__background-color__hover: #1B5E83;
+}
+
 .safety {
     transition: transform calc(var(--transition-duration) * 3);
 
@@ -47,8 +51,6 @@
     }
 
     &__link {
-        --safety-info-link__background-color__hover: #1B5E83;
-
         display: flex;
         align-items: center;
 
