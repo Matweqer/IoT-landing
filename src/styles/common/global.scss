@@ -15,8 +15,14 @@ html {
 body {
     margin: 0;
 
-    background: url('../img/common/body-bg.jpg') no-repeat;
-    background-size: cover;
+    @include media-till($media-tablet-horizontal) {
+        background-color: #DDF4FE;
+    }
+
+    @include media-from($media-tablet-horizontal) {
+        background: url('../img/common/body-bg.jpg') no-repeat;
+        background-size: cover;
+    }
 }
 
 img {
@@ -30,6 +36,8 @@ a {
 .main {
     position: relative;
 
-    max-height: 100vh;
-    overflow-y: hidden;
+    @include media-from($media-tablet-horizontal) {
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
 }

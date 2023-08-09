@@ -2,20 +2,22 @@
 @import 'list';
 
 .info-product {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include media-from($media-tablet-horizontal) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    overflow: hidden;
+        overflow: hidden;
 
-    transform: translateY(100vh);
+        transform: translateY(100vh);
 
-    transition: transform calc(var(--transition-duration)*3);
+        transition: transform calc(var(--transition-duration)*3);
 
-    &.info-product-show {
-        transform: translateY(0);
+        &.info-product-show {
+            transform: translateY(0);
+        }
     }
 
     &__container {
@@ -32,13 +34,13 @@
         font-weight: 400;
         line-height: 120%;
 
-        @include media-till($media-tablet) {
+        @include media-till($media-tablet-horizontal) {
             font-size: 34px;
 
             margin: 0 0 40px;
         }
 
-        @include media-from($media-tablet) {
+        @include media-from($media-tablet-horizontal) {
             font-size: 48px;
 
             margin: 0 0 50px;

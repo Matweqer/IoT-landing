@@ -2,23 +2,31 @@
 @import 'form';
 
 .contact-us {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include media-from($media-tablet-horizontal) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    overflow: hidden;
+        overflow: hidden;
 
-    transform: translateY(100vh);
+        transform: translateY(100vh);
 
-    transition: transform calc(var(--transition-duration)*3);
+        transition: transform calc(var(--transition-duration)*3);
 
-    &.contact-us-show {
-        transform: translateY(0);
+        &.contact-us-show {
+            transform: translateY(0);
+        }
     }
 
     &__container {
-        --container-justify-content: center;
+        @include media-till($media-tablet-horizontal) {
+            margin: 60px 0 0;
+        }
+
+        @include media-from($media-tablet-horizontal) {
+            --container-justify-content: center;
+        }
     }
 }
