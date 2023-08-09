@@ -5,15 +5,17 @@
 }
 
 .container {
-    display: flex;
-    justify-content: var(--container-justify-content);
-    align-items: var(--container-align-items);
-    flex-direction: var(--container-flex-direction);
-
     padding-left: var(--page-gap);
     padding-right: var(--page-gap);
 
-    height: 100vh;
+    @include media-from($media-tablet-horizontal) {
+        display: flex;
+        justify-content: var(--container-justify-content);
+        align-items: var(--container-align-items);
+        flex-direction: var(--container-flex-direction);
 
-    margin: auto;
+        height: 100vh;
+
+        margin: auto;
+    }
 }

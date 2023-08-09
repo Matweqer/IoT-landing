@@ -1,5 +1,9 @@
 .navigation {
-    @include media-from($media-tablet) {
+    @include media-till($media-tablet-horizontal) {
+        display: none;
+    }
+
+    @include media-from($media-tablet-horizontal) {
         position: fixed;
         right: 60px;
         top: 50%;
@@ -7,7 +11,7 @@
     }
 
     &__item {
-        @include media-from($media-tablet) {
+        @include media-from($media-tablet-horizontal) {
             position: relative;
 
             width: 30px;

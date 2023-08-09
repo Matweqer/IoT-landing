@@ -11,8 +11,15 @@
         margin: 0 0 34px;
 
         &_high {
-            font-size: 20px;
             font-weight: 700;
+
+            @include media-till($media-tablet-horizontal) {
+                font-size: 18px;
+            }
+
+            @include media-from($media-tablet-horizontal) {
+                font-size: 20px;
+            }
         }
     }
 }

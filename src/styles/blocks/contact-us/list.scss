@@ -7,6 +7,10 @@
 
     max-width: 400px;
 
+    @include media-till($media-tablet-horizontal) {
+        padding: 50px;
+    }
+
     @include media-from($media-tablet-horizontal) {
         padding: 50px;
 
@@ -49,9 +53,7 @@
         max-width: 24px;
         max-height: 24px;
 
-        @include media-from($media-tablet-horizontal) {
-            margin: 0 40px 0 0;
-        }
+        margin: 0 40px 0 0;
     }
 
     &__text {
@@ -67,8 +69,6 @@
     }
 
     &__container {
-        @include media-from($media-tablet-horizontal) {
-            margin: 60px 0 0;
-        }
+        margin: 60px 0 0;
     }
 }

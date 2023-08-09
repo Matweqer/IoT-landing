@@ -5,6 +5,10 @@
 
     width: 100%;
 
+    @include media-till($media-tablet-horizontal) {
+        flex-direction: column;
+    }
+
     &__title {
         color: var(--color-light-black);
         font-size: 20px;
@@ -23,5 +27,9 @@
 
     &__list-item {
         margin: 16px 0;
+    }
+
+    &__picture {
+        order: -1;
     }
 }
