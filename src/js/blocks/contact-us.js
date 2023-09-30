@@ -2,6 +2,8 @@ import $ from 'jquery'
 import 'jquery-validation/dist/localization/messages_ru'
 import 'jquery-validation'
 
+import { sendEmailFromContactUs } from '../email/contact-us-form'
+
 const contactUs = {
     init () {
         this.initCache()
@@ -15,6 +17,13 @@ const contactUs = {
 
     initValidateForm () {
         this.formValidator = this.$form.validate({
+            submitHandler: async (form, event)  => {
+                event.preventDefault()
+
+                const result = new FormData(form)
+
+                await sendEmailFromContactUs(result)
+            },
             onkeyup: (element) => {
                 clearTimeout(this.timeout);
 
