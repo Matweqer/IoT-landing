@@ -1,4 +1,4 @@
-.contact-us-form
+.contact-us-form(data-role="contact-us-form-container")
     h3.contact-us-form__title Напишите нам!
     p.contact-us-form__description Готовы ответить на ваши вопросы в любое время
     form.contact-us-form__form(id="contact-us-form" data-role="contact-us-form")
@@ -10,4 +10,5 @@
             textarea(class="contact-us-form__textarea-textarea" name="question" required minlength="50" id="contact-us-form-textarea" placeholder="Что хотели бы написать...")
         .contact-us-form__submit
             input(class="contact-us-form__submit-submit" type="submit", value="Отправить")
+        .contact-us-form__additional-info(style="display: none;" data-role="additional-info") Ваш вопрос был успешно отправлен
 

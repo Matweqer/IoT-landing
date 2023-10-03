@@ -5,6 +5,12 @@ import 'jquery-validation'
 import { sendEmailFromContactUs } from '../email/contact-us-form'
 
 const contactUs = {
+    options: {
+        selectors: {
+            sendingForm: '_sending'
+        }
+    },
+
     init () {
         this.initCache()
         this.initValidateForm()
@@ -13,6 +19,8 @@ const contactUs = {
     initCache () {
         this.formValidator = null
         this.$form = $('[data-role=contact-us-form]')
+        this.$formContainer = this.$form.parent('[data-role=contact-us-form-container]')
+        this.$additionalInfo = this.$form.find('[data-role=additional-info]')
     },
 
     initValidateForm () {
@@ -22,9 +30,17 @@ const contactUs = {
 
                 const result = new FormData(form)
 
+                this.$formContainer.addClass(this.options.selectors.sendingForm)
+
                 await sendEmailFromContactUs(result)
+
+                this.$additionalInfo.show()
+
+                this.$formContainer.removeClass(this.options.selectors.sendingForm)
             },
             onkeyup: (element) => {
+                this.$additionalInfo.hide()
+
                 clearTimeout(this.timeout);
 
                 this.timeout = setTimeout(() => {

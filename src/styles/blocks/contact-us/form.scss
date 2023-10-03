@@ -5,9 +5,15 @@
     --contact-use-form-submit__background-color: #1B5E83;
 }
 
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 .contact-us-form {
     background-color: var(--color-white);
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, .10);
+
+    position: relative;
 
     @include media-till($media-tablet-horizontal) {
         margin: 60px 0 0;
@@ -19,6 +25,51 @@
         padding: 30px 80px;
 
         width: 768px;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+
+        width: 50px;
+        height: 50px;
+
+        margin-top: -25px;
+        margin-left: -25px;
+
+        border: 4px solid rgba(0,0,0,.1);
+        border-left-color: #000;
+        border-radius: 50%;
+
+        animation: spin 1s linear infinite;
+
+        display: none;
+    }
+
+    &._sending {
+        pointer-events: none;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            background-color: rgba(0,0,0, .1);
+
+            pointer-events: none;
+        }
+
+        &::before {
+            display: block;
+        }
     }
 
     &__title {
@@ -175,5 +226,11 @@
         position: absolute;
         bottom: -20px;
         left: 0;
+    }
+
+    &__additional-info {
+        margin: 12px 0 0;
+
+        text-align: center;
     }
 }
