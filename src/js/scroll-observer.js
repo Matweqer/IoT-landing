@@ -1,14 +1,10 @@
-/*
- * TODO добавить скрол по кнопке
- */
-
 function ScrollObserver({
     element = document.getElementsByTagName('body')[0],
     excludeSelector,
     eventKey = '',
     isPreventDefault = false,
     isStopPropagation = false,
-    sensitivityY = 150,
+    sensitivityY = 125,
     sensitivityX = 100,
     delay = 10,
 } = {}) {
