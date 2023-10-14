@@ -1,5 +1,5 @@
 .info-product-text {
-    margin: 0 0 36px;
+    margin: 0 0;
 
     &__item {
         color: var(--color-light-black);
@@ -8,7 +8,7 @@
         font-weight: 300;
         line-height: 140%;
 
-        margin: 0 0 34px;
+        margin: 0 0;
 
         &_high {
             font-weight: 700;
