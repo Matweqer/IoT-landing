@@ -55,8 +55,8 @@
         @include media-from($media-tablet-horizontal) {
             grid-template-columns: repeat(3, 1fr);
 
-            row-gap: 60px;
-            column-gap: 24px;
+            row-gap: 25px;
+            column-gap: 15px;
 
             margin: 0 0 80px;
         }
@@ -78,6 +78,7 @@
     &__list-link {
         @include media-from($media-tablet-horizontal) {
             padding: 0 45px 60px;
+            scale: 0.8;
         }
     }
 

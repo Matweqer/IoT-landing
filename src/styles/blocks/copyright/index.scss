@@ -2,7 +2,7 @@
     padding-left: var(--page-gap);
     padding-right: var(--page-gap);
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 120%;
 
@@ -12,6 +12,6 @@
 
     @include media-from($media-tablet-horizontal) {
         position: fixed;
-        bottom: 30px;
+        bottom: 10px;
     }
 }
