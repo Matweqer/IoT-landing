@@ -53,11 +53,11 @@
         line-height: 140%;
 
         @include media-till($media-tablet) {
-            margin: 0 0 40px;
+            margin: 0 0 20px;
         }
 
         @include media-from($media-tablet) {
-            margin: 0 0 56px;
+            margin: 0 0 40px;
         }
 
         &_bold {
@@ -74,7 +74,7 @@
     }
 
     &__list-list {
-        margin: 0 0 80px;
+        margin: 0 0 40px;
         padding: 0;
         list-style-type: none;
     }

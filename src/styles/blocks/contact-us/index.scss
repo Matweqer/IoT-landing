@@ -26,6 +26,7 @@
         }
 
         @include media-from($media-tablet-horizontal) {
+            scale: 0.9;
             --container-justify-content: center;
         }
     }
