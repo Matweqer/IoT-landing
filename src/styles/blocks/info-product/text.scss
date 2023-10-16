@@ -7,8 +7,12 @@
         font-style: normal;
         font-weight: 300;
         line-height: 140%;
+        margin: 0 0 30px;
 
-        margin: 0 0;
+        @include media-from($media-tablet-horizontal) {
+            width: 95%;
+        }
+
 
         &_high {
             font-weight: 700;
